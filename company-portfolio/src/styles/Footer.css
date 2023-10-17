@@ -1,0 +1,119 @@
+/*.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; 
+  
+  .footer-left img {
+    width: 100px; 
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+  
+  .footer-column {
+    flex: 1;
+    text-align: center; 
+    margin: 10px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.5rem;
+  }
+  
+  .footer-column p {
+    font-size: 1rem;
+  }
+  */
+  /*
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .footer-left img {
+    width: 100px;
+  }
+  
+  .footer-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center; 
+  
+  .footer-column {
+    flex: 1;
+  
+  .footer-column h3 {
+    font-size: 1.5rem;
+  }
+  
+  .footer-column p {
+    font-size: 1rem;
+  }
+  */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center; /* Center-align the entire footer horizontally */
+    align-items: center; /* Center-align the entire footer vertically */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Reduce the margin on the left side */
+  }
+  
+  .footer-left img {
+    width: 100px; /* Adjust the width of your company logo as needed */
+  }
+  
+  .footer-columns {
+    display: flex;
+    gap: 20px; /* Add a gap between the columns */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    text-align: center; /* Center-align content within each column */
+  }
+  
+  .footer-column {
+    flex: 1; /* Equal width for all columns */
+  }
+  
+  .footer-column h3 {
+    font-size: 1.5rem;
+  }
+  
+  .footer-column p {
+    font-size: 1rem;
+  }
+  .footer-column a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Set the link color to white */
+  }
