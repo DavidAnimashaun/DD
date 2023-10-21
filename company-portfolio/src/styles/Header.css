@@ -1,4 +1,4 @@
-  .header {
+/*  .header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
@@ -22,7 +22,7 @@
   .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* Adjust this value to position the menu below the "Services" link */
+    top: 100%;
     left: -38px;
     background-color: #333;
     list-style: none;
@@ -47,5 +47,90 @@
   .dropdown-menu li {
     margin-bottom: 20px;
   }
-  
+  */
   /* Style as needed */
+
+
+  /*////////////////ENHANCED CSS////////////////*/
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -38px;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1;
+  }
+  
+  .dropdown-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .nav-links li.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #007bff;
+  }
+  
+  .dropdown-menu li {
+    margin-bottom: 20px;
+  }
+  
+  .nav-links li a::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #007bff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+  }
+  
+  .nav-links li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  

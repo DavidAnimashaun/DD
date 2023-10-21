@@ -1,25 +1,4 @@
-/*.services {
-    background-color: #fff;
-    padding: 30px;
-    text-align: center;
-  }
-  
-  .services h2 {
-    font-size: 2rem;
-  }
-  
-  .services ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .services li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-  }
-*/
-
-.services-container {
+/*.services-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,16 +8,16 @@
   
   .button-container {
     display: flex;
-    justify-content: space-around; /* Horizontal alignment with equal spacing */
+    justify-content: space-around; 
     align-items: center;
-    width: 100%; /* Full-width container */
-    margin: 20px 0; /* Add margin for separation from other content */
+    width: 100%; 
+    margin: 20px 0;
   }
   
   img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 10px; /* Add space between the image and button */
+    margin-bottom: 10px; 
   }
 
   .service {
@@ -55,16 +34,16 @@
     text-align: center;
   }
   
-  .Webdevelopment {
-    background-color: #FF5733; /* Set a unique background color for Service 1 */
+  .Web-Development {
+    background-color: #FF5733; 
   }
   
-  .Mobileappdevelopment {
-    background-color: #33FF57; /* Set a unique background color for Service 2 */
+  .Mobile-App-Development {
+    background-color: #33FF57; 
   }
   
-  .Uiuxdesign {
-    background-color: #5733FF; /* Set a unique background color for Service 3 */
+  .UI-UX-Design {
+    background-color: #5733FF; 
   }
   
   .service-button:hover {
@@ -72,6 +51,53 @@
     color: white;
   }
 
+*/
+/*////////////ENHANCED CSS //////////////////////*/
+.services-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.service {
+  text-align: center;
+  flex: 1;
+  margin: 20px;
+  transition: transform 0.3s;
+}
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-button {
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  background-color: transparent;
+  color: #007bff;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.service-button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
 
   
   

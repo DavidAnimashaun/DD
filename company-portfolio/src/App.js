@@ -25,53 +25,89 @@ function App() {
 export default App;
 */
 
-import React from 'react';
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useState, useEffect} from 'react';
 import './styles/App.css'; // Import your App.css file if you create one.
 import Header from './components/Header';
 import About from './components/About';
 import Services from './components/Services';
-//import WebDevelopment from './components/WebDevelopment'; // Import the new components
-//import MobileAppDevelopment from './components/MobileAppDevelopment';
-//import UX_Design from './components/UX_Design';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import Footer from './components/Footer'; 
-
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <Header /> 
-      <About/>
+      <Header />
+      <About />
       <Services/>
       <Portfolio />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+
+//////////////////MULTI-PAGE APPLICATION CODE ////////////////////
 /*
+import React, { useState, useEffect} from 'react';
+import './styles/App.css'; // Import your App.css file if you create one.
+import Header from './components/Header';
+import About from './components/About';
+import Services from './components/Services';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Footer from './components/Footer'; 
+import WebDevelopment from './components/WebDevelopment';
+import MobileAppDevelopment from './components/MobileAppDevelopment';
+import UIUXDesign from './components/UIUXDesign';
 function App() {
-  return (
-    <Router >
-    <div className="App">
-      <Header />
-      <Switch> 
-        <Route path='/' exact component={About}/>
-        <Route path='/services' component={Services}/>
-        <Route path = '/WebDevelopment' component={WebDevelopment}/>
-        <Route path = '/MobileAppDevelopment' component={MobileAppDevelopment}/>
-        <Route path = '/WebDevelopment' component={UX_Design}/>
-      </Switch>
-      <Portfolio />
-      <Contact />
-      <Footer/>
-    </div>
-    </Router>
-  );
+  const [selectedPage, setSelectedPage]  = useState('home');
+  
+  useEffect(() => {
+    const path = window.location.pathname;
+    // Remove the leading '/' to get the selectedPage
+    setSelectedPage(path.substring(1));
+  }, []);
+
+  const renderPage = () => {
+    switch (selectedPage) {
+      case 'home':
+        return (
+          <div className="App">
+          <Header />
+          <About />
+          <Services onSelectPage={setSelectedPage} />
+          <Portfolio />
+          <Contact />
+          <Footer />
+        </div>
+      );
+      case 'Web-Development':
+        return <WebDevelopment />;
+      case 'Mobile-App-Development':
+        return <MobileAppDevelopment />;  
+      case 'UI-UX-Design':
+        return <UIUXDesign />;
+      default:
+        return (
+          <div className="App">
+            <Header />
+            <About />
+            <Services onSelectPage={setSelectedPage} />
+            <Portfolio />
+            <Contact />
+            <Footer />
+          </div>
+        );
+    }
+  };
+  return renderPage();
+
 }
 
-export default App;*/
+export default App;
+*/
+
 

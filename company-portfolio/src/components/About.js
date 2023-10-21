@@ -23,12 +23,12 @@ const About = () => {
         <div className="team-member">
           <img src={process.env.PUBLIC_URL + '/images/Daniyal_Sohail.jpg'} alt="Team Member 1" />
           <h3>Daniyal Sohail</h3>
-          <p>John is a co-founder of our company. He specializes in web development and has over 10 years of experience.</p>
+          <p>Daniyal is a co-founder of our company. He specializes in web development and has over 10 years of experience.</p>
         </div>
         <div className="team-member">
           <img src="logo512.png" alt="Team Member 2" />
-          <h3>Jane Smith</h3>
-          <p>Jane is a creative designer. She's passionate about creating stunning visuals and user experiences.</p>
+          <h3>David Animashaun</h3>
+          <p>David is a co-founder of our company. He specializes in web development and has over 10 years of experience.</p>
         </div>
       </div>
       {/* Add more team members as needed */}

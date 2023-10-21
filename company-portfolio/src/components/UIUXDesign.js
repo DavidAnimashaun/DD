@@ -2,12 +2,12 @@
 import Header from './Header';
 import Footer from './Footer';
 
-const WebDevelopment = () => {
+const UIUXDesign = () => {
   return (
     <div>
       <Header />
-      <section className="Web-Development">
-        <h1>Web Development Services</h1>
+      <section className="UI-UX-Design">
+        <h1>UI/UX Design Services</h1>
         <p>
           Your introduction text about your web development services can go here.
         </p>
@@ -18,4 +18,4 @@ const WebDevelopment = () => {
   );
 }
 
-export default WebDevelopment;*/
+export default UIUXDesign;*/
