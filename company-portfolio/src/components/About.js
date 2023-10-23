@@ -1,37 +1,48 @@
-/*import React from 'react';
-import '../styles/About.css';
-
-const About = () => {
-  return (
-    <section id="about" className="about">
-      <h2>About Us</h2>
-      <p>We are a passionate team of developers dedicated to creating amazing web applications.</p>
-    </section>
-  );
-}
-
-export default About;
-*/
+// Updated About Component
 import React from 'react';
 import '../styles/About.css';
+
+import davidImage from '../images/david.jpg';
+import daniyalImage from '../images/daniyal.jpg';
+
 const About = () => {
   return (
     <section id="about" className="about">
       <h2>About Us</h2>
-      <p>We are a passionate team of developers dedicated to creating amazing web applications.</p>
-      <div className="team-members-container">
-        <div className="team-member">
-          <img src={process.env.PUBLIC_URL + '/images/Daniyal_Sohail.jpg'} alt="Team Member 1" />
-          <h3>Daniyal Sohail</h3>
-          <p>Daniyal is a co-founder of our company. He specializes in web development and has over 10 years of experience.</p>
-        </div>
-        <div className="team-member">
-          <img src="logo512.png" alt="Team Member 2" />
-          <h3>David Animashaun</h3>
-          <p>David is a co-founder of our company. He specializes in web development and has over 10 years of experience.</p>
+      
+      <div className="wrap">
+        <div className="info">
+          <div className="info-col info-col-left">
+            <div className="info-item orange">
+              <div className="info-item-text">
+                <img src={davidImage} alt="David" className="person-image" />
+                <h3>David Animashaun<span className="mark"></span></h3>
+                <p>Co-owner</p>
+              </div>
+            </div>
+          </div>
+          <div className="info-col-middle">
+            {/* Additional content for the middle section */}
+            <div className="middle-content">
+              <h3>Welcome to VersaWeb Design</h3>
+              <p>
+                At VersaWeb Design, we are passionate about creating stunning and innovative web solutions.
+                Our team is dedicated to delivering high-quality websites that not only meet but exceed
+                our clients' expectations.
+              </p>
+            </div>
+          </div>
+          <div className="info-col info-col-right">
+            <div className="info-item red">
+              <div className="info-item-text">
+                <img src={daniyalImage} alt="Daniyal" className="person-image" />
+                <h3>Daniyal Sohail <span className="mark"></span></h3>
+                <p>Co-owner</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      {/* Add more team members as needed */}
     </section>
   );
 }

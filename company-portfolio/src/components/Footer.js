@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/Footer.css'; // Adjust the path to the CSS file
-
+import logo from '../images/uselogo.png';
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-left">
-        <img src={process.env.PUBLIC_URL + ' /logo512.png'} alt="Your Logo" />
+      <img src={logo} alt="Your Company Logo" className="logo" />
       </div>
       <div className="footer-columns">
         <div className="footer-column">

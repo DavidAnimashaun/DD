@@ -1,28 +1,3 @@
-/*import React from 'react';
-import '../styles/Contact.css';
-
-const Contact = () => {
-  return (
-    <section id="contact" className="contact">
-      <h2>Contact Us</h2>
-      <p>You can reach us at <a href="mailto:contact@company.com">contact@company.com</a></p>
-    </section>
-  );
-}
-
-export default Contact;
-*/
-
-
-
-
-
-
-/* //////////// CONTACT US WITH FORM ///////////////*/
-
-
-
-
 import React, { useState } from 'react';
 import '../styles/Contact.css';
 
@@ -46,10 +21,10 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <div className="contact-form-container">
-        <h2>Contact Us</h2>
+      <div className="form">
+        <h2>CONTACT US</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
+          <p>
             <label htmlFor="name">Name:</label>
             <input
               type="text"
@@ -57,10 +32,11 @@ const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              placeholder="Write your name here.."
               required
             />
-          </div>
-          <div className="form-group">
+          </p>
+          <p>
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -68,26 +44,31 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              placeholder="Let us know how to contact you back.."
               required
             />
-          </div>
-          <div className="form-group">
+          </p>
+          <p>
             <label htmlFor="message">Message:</label>
-            <textarea
+            <input
+              type="text"
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              rows="4"
+              placeholder="What would you like to tell us.."
               required
             />
-          </div>
-          <button type="submit">Submit</button>
+          </p>
+          <button type="submit">Send Message</button>
         </form>
+        <div>
+          <span className="fa fa-phone"></span>001 1023 567
+          <span className="fa fa-envelope-o"></span> contact@company.com
+        </div>
       </div>
     </section>
   );
 };
 
 export default Contact;
-

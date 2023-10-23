@@ -39,7 +39,6 @@ function App() {
       <Header />
       <About />
       <Services/>
-      <Portfolio />
       <Contact />
       <Footer />
     </div>

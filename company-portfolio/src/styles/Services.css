@@ -1,104 +1,68 @@
-/*.services-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    width: 100%; 
-    margin: 20px 0;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px; 
-  }
+/* Assuming the styles for the rest of your page are in Services.css */
 
-  .service {
-    text-align: center;
-  }
-  .service-button {
-    padding: 10px 20px;
-    border: 2px solid blue;
-    background-color: transparent;
-    color: black;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    width: 200px;
-    text-align: center;
-  }
-  
-  .Web-Development {
-    background-color: #FF5733; 
-  }
-  
-  .Mobile-App-Development {
-    background-color: #33FF57; 
-  }
-  
-  .UI-UX-Design {
-    background-color: #5733FF; 
-  }
-  
-  .service-button:hover {
-    background-color: blue;
-    color: white;
-  }
+.services {
+  text-align: center;
+  padding: 50px 0;
+}
 
-*/
-/*////////////ENHANCED CSS //////////////////////*/
 .services-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  margin: 20px 0;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0; /* Remove the gap between items */
 }
 
-.service {
+.service-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-img-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  transition: filter 0.3s;
+}
+
+.service-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* Text color */
   text-align: center;
-  flex: 1;
-  margin: 20px;
-  transition: transform 0.3s;
-}
-.service:hover {
-  transform: translateY(-5px);
+  opacity: 0; /* Initial state is hidden */
+  transition: opacity 0.3s, color 0.3s; /* Added color transition */
 }
 
-.service img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
+/* Remove the button styling */
 .service-button {
-  padding: 10px 20px;
-  border: 2px solid #007bff;
-  background-color: transparent;
-  color: #007bff;
-  text-decoration: none;
-  width: 200px;
-  text-align: center;
-  display: block;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 4px;
+  display: none;
 }
 
-.service-button:hover {
-  background-color: #007bff;
-  color: #fff;
-  transition: background-color 0.3s, color 0.3s;
+/* Added hover effect for darkening the image and showing text */
+.service-item:hover .service-img-background {
+  filter: brightness(80%);
 }
 
-  
-  
+.service-item:hover .service-text-wrapper {
+  opacity: 1;
+  color: lightseagreen; /* Brighter color on hover */
+}
 
+/* Initial state for text wrapper */
+.service-text-wrapper {
+  transition: opacity 0.3s, color 0.3s; /* Added color transition */
+}
+
+/* Style for service titles */
+.service-text-wrapper h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Style for service descriptions */
+.service-text-wrapper p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+}

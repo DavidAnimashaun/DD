@@ -1,79 +1,41 @@
 import React from 'react';
 import '../styles/Services.css';
+
+import webImage from '../images/web.jpg';
+import appImage from '../images/app.jpg';
+import uiImage from '../images/ui.jpg';
+
 const Services = () => {
-  return (
-  <section id="services" className="services">
-    <h2>Our Services</h2>
-    <div className="services-container">
-      <div className="service">
-        <img src="/logo192.png" alt= "Service 1 " />
-        <a className="service-button" href="/Web-Development">Web Development</a>
-      </div>
-
-      <div className="service">
-        <img src="/logo192.png" alt="Service 2 " />
-        <a className="service-button" href="/Mobile-App-Development">Mobile App Development</a>
-      </div>
-
-      <div className="service">
-        <img src="/logo192.png" alt="Service 3 " />
-        <a className="service-button" href="/UI-UX-Design">UI/UX Design</a>
-      </div>
-    </div>
-  </section>
-  );
-}
-export default Services;
-
-
-
-
-
-
-
-
-
-
-//////////////MULTI-PAGE APPLICATION CODE ///////////////////
-/*
-
-const Services = ({ onSelectPage }) => {
-  const handleServiceClick = (service) => (e) => {
-    e.preventDefault();
-    const url = `/${service}`;
-    onSelectPage(service);
-    window.location.href = url;
-  };
-
   return (
     <section id="services" className="services">
       <h2>Our Services</h2>
       <div className="services-container">
-        <div className="service">
-          <img src="/logo192.png" alt="Service 1" />
-          <button className="service-button" href="/Web-Development" onClick={handleServiceClick('Web-Development')}>
-            Web Development
-          </button>
+        <div className="service-item">
+          <div className="service-img-background" style={{ backgroundImage: `url(${webImage})` }}></div>
+          <div className="service-text-wrapper">
+            <h3>Web Development</h3>
+            <p>A comprehensive range of web development services to create stunning and functional websites.</p>
+          </div>
         </div>
 
-        <div className="service">
-          <img src="/logo192.png" alt="Service 2" />
-          <button className="service-button" href="/Mobile-App-Development" onClick={handleServiceClick('Mobile-App-Development')}>
-            Mobile App Development
-          </button>
+        <div className="service-item">
+          <div className="service-img-background" style={{ backgroundImage: `url(${appImage})` }}></div>
+          <div className="service-text-wrapper">
+            <h3>Mobile App Development</h3>
+            <p>Crafting innovative mobile applications tailored to meet your specific business needs.</p>
+          </div>
         </div>
 
-        <div className="service">
-          <img src="/logo192.png" alt="Service 3" />
-          <button className="service-button" href="/UI-UX-Design" onClick={handleServiceClick('UI-UX-Design')}>
-            UI/UX Design
-          </button>
+        <div className="service-item">
+          <div className="service-img-background" style={{ backgroundImage: `url(${uiImage})` }}></div>
+          <div className="service-text-wrapper">
+            <h3>UI/UX Design</h3>
+            <p>Creating engaging user interfaces and user experiences for digital products and services.</p>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Services;
-
-*/
