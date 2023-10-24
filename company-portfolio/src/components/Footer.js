@@ -17,10 +17,6 @@ const Footer = () => {
           <p>Explore the range of services we offer.</p>
         </div>
         <div className="footer-column">
-          <a href="#portfolio"> <h3>Portfolio</h3></a>
-          <p>View our latest projects.</p>
-        </div>
-        <div className="footer-column">
           <a href="#contact"><h3>Contact</h3></a>
           <p>Get in touch with us.</p>
         </div>

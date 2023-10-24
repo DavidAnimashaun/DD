@@ -20,7 +20,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 500px;
   transition: filter 0.3s;
 }
 
@@ -42,12 +42,14 @@
 
 /* Added hover effect for darkening the image and showing text */
 .service-item:hover .service-img-background {
-  filter: brightness(80%);
+  filter: brightness(20%);
 }
 
 .service-item:hover .service-text-wrapper {
   opacity: 1;
-  color: lightseagreen; /* Brighter color on hover */
+  color: rgb(249, 251, 248); /* Brighter 
+  color on hover */
+  font-weight: 800;
 }
 
 /* Initial state for text wrapper */

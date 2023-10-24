@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
+import { postContactForm } from '../api/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,22 +8,45 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can handle form submission logic here, e.g., send data to a server.
-    console.log(formData);
+
+    try {
+      // Make a POST request to the backend with the form data
+      const response = await postContactForm(formData);
+
+      // Log the response from the backend
+      console.log(response);
+
+      // Set success message
+      setSubmitMessage('Your form was submitted successfully!');
+
+      // Clear form details
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error.message);
+
+      // Set error message
+      setSubmitMessage('Please try again. An error occurred.');
+    }
   };
 
   return (
     <section id="contact" className="contact">
       <div className="form">
         <h2>CONTACT US</h2>
+        {submitMessage && <p className={submitMessage.includes('error') ? 'error' : 'success'}>{submitMessage}</p>}
         <form onSubmit={handleSubmit}>
           <p>
             <label htmlFor="name">Name:</label>
@@ -50,8 +74,7 @@ const Contact = () => {
           </p>
           <p>
             <label htmlFor="message">Message:</label>
-            <input
-              type="text"
+            <textarea
               id="message"
               name="message"
               value={formData.message}
@@ -63,8 +86,8 @@ const Contact = () => {
           <button type="submit">Send Message</button>
         </form>
         <div>
-          <span className="fa fa-phone"></span>001 1023 567
-          <span className="fa fa-envelope-o"></span> contact@company.com
+          <li><span className="phone"></span> Phone Number 443-484-6589</li>
+          <li><span className="phone"></span> Phone Number 410-978-8337</li>
         </div>
       </div>
     </section>
