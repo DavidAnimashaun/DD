@@ -25,12 +25,12 @@ function App() {
 export default App;
 */
 
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import './styles/App.css'; // Import your App.css file if you create one.
 import Header from './components/Header';
 import About from './components/About';
 import Services from './components/Services';
-import Portfolio from './components/Portfolio';
+//import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 function App() {
