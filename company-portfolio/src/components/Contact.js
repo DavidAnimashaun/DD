@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
-import { postContactForm } from '../api/api';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../firebase';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,13 +20,17 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      // Make a POST request to the backend with the form data
-      const response = await postContactForm(formData);
 
-      // Log the response from the backend
-      console.log(response);
+      const docRef = await addDoc(collection(db, 'contacts'), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      });
 
-      // Set success message
+      
+      console.log(docRef);
+
+      
       setSubmitMessage('Your form was submitted successfully!');
 
       // Clear form details
@@ -83,7 +88,7 @@ const Contact = () => {
               required
             />
           </p>
-          <button type="submit">Send Message</button>
+          <button type="submit"> Send Message </button>
         </form>
         <div>
           <li><span className="phone"></span> Phone Number 443-484-6589</li>
@@ -95,3 +100,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
