@@ -1,4 +1,4 @@
-// In your server.js or app.js file
+/*// In your server.js or app.js file
 const express = require('express');
 const sqlite3 = require('sqlite3');
 const bodyParser = require('body-parser');
@@ -44,3 +44,6 @@ app.post('/api/contact', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+*/
+
+
