@@ -42,7 +42,7 @@
   }*/
 
   /*////////ENHANCED CSS//////////////////*/
-
+/*
   .footer {
     background-color:#020408;
     color: #fff;
@@ -86,4 +86,133 @@
     text-decoration: none;
     color: #fff;
   }
-  
+  */
+
+  /* Styles for your footer */
+
+  /*
+.footer {
+  background-color: #020408;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center; 
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.footer-left img {
+  width: 100px;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.footer-column {
+  flex: 1;
+  max-width: 250px; 
+  margin: 10px; 
+  text-align: left; 
+}
+
+.footer-column h3 {
+  font-size: 1.5rem;
+}
+
+.footer-column p {
+  font-size: 1rem;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+@media (max-width: 767px) {
+  .footer-columns {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .footer-column {
+    flex: 1;
+    max-width: none; 
+    margin: 10px 0; 
+  }
+}
+*/
+/* Styles for your footer */
+
+.footer {
+  background-color: #020408;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center; /* Center align text */
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.footer-left img {
+  width: 100px;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align columns */
+  align-items: center; /* Center align items within columns */
+}
+
+.footer-column {
+  flex: 1;
+  max-width: 250px; /* Limit column width for smaller screens */
+  margin: 10px; /* Add margin for spacing */
+  text-align: center; /* Center-align column text */
+}
+
+.footer-column h3 {
+  font-size: 1.5rem;
+}
+
+.footer-column p {
+  font-size: 1rem;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .footer-columns {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+
+  .footer-column {
+    flex: 1;
+    max-width: none; /* Reset max-width for smaller screens */
+    margin: 10px 0; /* Adjust margin for spacing */
+  }
+}
